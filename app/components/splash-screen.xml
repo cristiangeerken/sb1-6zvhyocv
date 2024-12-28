@@ -1,0 +1,5 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" actionBarHidden="true">
+    <GridLayout>
+        <Image src="~/images/splash.png" stretch="aspectFit" class="w-3/4" />
+    </GridLayout>
+</Page>

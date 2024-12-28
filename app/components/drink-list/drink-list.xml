@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Carta de Tragos" class="bg-purple-600 text-white" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <ListView items="{{ groupedDrinks }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="mb-4">
+                        <Label text="{{ title }}" class="text-xl font-bold mb-2 text-purple-600 p-2 bg-purple-100 rounded" />
+                        <ListView items="{{ items }}" height="{{ items.length * 120 }}" class="list-group">
+                            <ListView.itemTemplate>
+                                <GridLayout rows="auto, auto" columns="*" class="p-2 border-b border-gray-200">
+                                    <Label text="{{ name }}" row="0" class="text-lg font-semibold mb-1" textWrap="true" />
+                                    <Label text="{{ ingredients.join(', ') }}" row="1" class="text-sm text-gray-600" textWrap="true" />
+                                </GridLayout>
+                            </ListView.itemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</Page>
